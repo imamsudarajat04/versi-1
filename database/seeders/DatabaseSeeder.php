@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
+use Database\Migrations\GroupTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,5 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        $this->call('database\seeds\GroupTableSeeder.php');
+        // $this->call('database\seeds\CustomTableSeeder');
     }
 }
